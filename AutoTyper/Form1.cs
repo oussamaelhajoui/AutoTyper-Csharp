@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace AutoTyper
 {
@@ -15,6 +16,15 @@ namespace AutoTyper
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var allProcesses = Process.GetProcesses();
+            foreach (var process in allProcesses)
+            {
+                Console.WriteLine(process);
+            }
         }
     }
 }
